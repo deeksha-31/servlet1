@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Employee</title>
+       <style>
+        /* Navbar */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffeb3b;
+        }
+
+        /* Container */
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Form */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            background-color:hotpink;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: violet;
+            transform: scale(1.05);
+        }
+
+        button[type="reset"] {
+            background-color: hotpink;
+        }
+
+        button[type="reset"]:hover {
+            background-color:violet;
+        }
+
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        button a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+	<div class="navbar">
+ 		 <a href="index.html">Home</a>
+	</div>
+    <div class="container">
+        <h1>Add Employee</h1>
+         <form action="addEmployee" method="post">
+            
+            <label for="name">Employee Name:</label>
+            <input type="text" name="name"  required>
+            <label for="age">Age:</label>
+            <input type="number" name="age"  required>
+            <label for="doj">Date of Joining:</label>
+            <input  type="date" name="doj" required>
+            <label for="salary">Salary:</label>
+            <input type="number" name="salary"  required>
+          
+            <button type="submit" onclick="showDialog()">Add Employee</button>
+            <button type="reset">Reset</button>
+            
+        </form>
+    </div>
+</body>
+</html>

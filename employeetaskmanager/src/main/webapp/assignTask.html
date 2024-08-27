@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Task</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+    <style>	
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffeb3b;
+        }
+
+       
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+      
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+			display: block;
+            margin:10px 0 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            background-color: hotpink;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: deeppink;
+            transform: scale(1.05);
+        }
+
+        button[type="reset"] {
+            background-color: hotpink;
+        }
+
+        button[type="reset"]:hover {
+            background-color: deeppink;
+        }
+
+    </style>
+</head>
+<body>
+	
+	<div class="navbar">
+ 		 <a href="index.html">Home</a>
+	</div>
+    <h2>Assign Task</h2>
+    <form action="assignTask" method="post">
+        <!-- Other input fields -->
+        <label for="empId">Employee ID:</label>
+        <input type="text" id="empId" name="empId" required>
+        <br>
+
+        <label for="taskId">Task ID:</label>
+        <input type="text" id="taskId" name="taskId" required>
+        <br>
+
+        <button type="submit" value="assignTask">Assign Task</button>
+        <button type="reset">Reset</button>
+        
+        
+    </form>
+</body>
+</html>
